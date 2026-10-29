@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CetisAsiste · Administración</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+
+  <!-- ============ LOGIN ============ -->
+  <section id="login-view" class="login">
+    <div class="login-side">
+      <div class="login-logo">⇥</div>
+      <h1>CetisAsiste</h1>
+      <p class="muted-light">Control de entradas y salidas del CETis 61 Cd. Juárez</p>
+      <p class="strong-light">Acceso para Control Escolar y Enfermería</p>
+    </div>
+    <div class="login-main">
+      <form id="login-form" class="login-box" autocomplete="on">
+        <h2>Iniciar sesión</h2>
+        <p class="muted">Usa el usuario que te asignó el plantel</p>
+
+        <label for="login-user">Usuario</label>
+        <div class="input-wrap">
+          <input id="login-user" type="text" placeholder="Ingresa tu usuario" required />
+        </div>
+
+        <label for="login-pass">Contraseña</label>
+        <div class="input-wrap">
+          <span class="ico"></span>
+          <input id="login-pass" type="password" placeholder="Contraseña" required />
+          <button type="button" id="toggle-pass" class="eye" aria-label="Mostrar contraseña">👁</button>
+        </div>
+
+        <a href="#" id="forgot" class="forgot">¿Olvidaste tu contraseña?</a>
+        <p id="login-error" class="error" hidden></p>
+        <button type="submit" class="btn btn-primary btn-block">Iniciar sesión</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============  Menu ============ -->
+  <section id="app-view" class="app" hidden>
+    <aside class="sidebar">
+      <div>
+        <div class="brand">CetisAsiste</div>
+        <div class="brand-sub">Control Escolar · CETis 61</div>
+        <nav>
+          <a href="#alumnos" data-route="alumnos"><span>👥</span>Alumnos</a>
+          <a href="#pagos" data-route="pagos"><span>💳</span>Estado de pago</a>
+          <a href="#practicantes" data-route="practicantes"><span>🧾</span>Practicantes</a>
+          <a href="#horarios" data-route="horarios"><span>🕒</span>Horarios</a>
+          <a href="#registros" data-route="registros"><span>📥</span>Entradas y salidas</a>
+        </nav>
+      </div>
+      <div class="user-box">
+        <div id="user-name" class="user-name">Nombre del usuario</div>
+        <button id="btn-logout" class="link-btn">⇦ Cerrar sesión</button>
+      </div>
+    </aside>
+
+    <main id="main" class="main"></main>
+  </section>
+
+  <!-- ============ MODAL ============ -->
+  <div id="modal-backdrop" class="backdrop" hidden>
+    <div id="modal" class="modal" role="dialog" aria-modal="true"></div>
+  </div>
+
+  <div id="toast" class="toast" hidden></div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<div class="page-head">
+  <div>
+    <h1>Practicantes</h1>
+    <p>
+      Crea su perfil y desactívalo al terminar; si está inactivo, el escáner
+      muestra una alerta
+    </p>
+  </div>
+  <div class="head-actions">
+    <label class="search"
+      >🔍<input id="q" placeholder="Buscar practicante"
+    /></label>
+    <button class="btn btn-primary" id="btn-add">Agregar practicante</button>
+  </div>
+</div>
+<div class="filters" id="filters"></div>
+<div class="layout-2">
+  <div class="table-card">
+    <table>
+      <thead>
+        <tr>
+          <th>Folio</th>
+          <th>Nombre</th>
+          <th>Ingresó</th>
+          <th>Estado</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+  <div class="side-card">
+    <h3>Historial de cambios</h3>
+    <p class="sub">Quién cambió el estado y cuándo</p>
+    <div id="hist"></div>
+  </div>
+</div>

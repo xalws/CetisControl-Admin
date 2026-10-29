@@ -1,0 +1,31 @@
+<div class="page-head">
+  <div>
+    <h1>Alumnos</h1>
+    <p>Todos los alumnos del plantel: datos, estatus y dónde están</p>
+  </div>
+  <div class="head-actions">
+    <label class="search"
+      >🔍<input id="q" placeholder="Buscar por nombre o matrícula"
+    /></label>
+    <button class="btn" id="btn-import">Importar Excel</button>
+    <button class="btn btn-primary" id="btn-add">Agregar alumno</button>
+  </div>
+</div>
+<div class="filters" id="filters"></div>
+<div class="table-card">
+  <table>
+    <thead>
+      <tr>
+        <th>Matrícula</th>
+        <th>Nombre</th>
+        <th>Grupo</th>
+        <th>Turno</th>
+        <th>Estado</th>
+        <th>Estatus</th>
+        <th>Ubicación</th>
+      </tr>
+    </thead>
+    <tbody id="tbody"></tbody>
+  </table>
+</div>
+<p class="count" id="count"></p>
